@@ -17,6 +17,24 @@ aloha.find((err, result) =>{
 },'_http._tcp')
 ```
 
+# CLI
+```
+aloha-sd [options]
+```
+
+```
+aloha-sd -l _http._tcp
+```
+
+Options:
+
+| short | full | description |
+| --- | --- | --- |
+| -h | --help | output usage information |
+| -V | --version | output the version number|
+| -a | --all | Browse for all services, regardless of the type |
+| -l "service type" | --lookup "service type" | Browse for specific service type |
+
 # API
 # Initializing
 ```js
