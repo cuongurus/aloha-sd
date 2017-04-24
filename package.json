@@ -1,0 +1,40 @@
+{
+  "name": "aloha-sd",
+  "version": "1.0.0",
+  "description": "A Bonjour/Zeroconf protocol implementation in JavaScript",
+  "main": "index.js",
+  "bin": {
+    "aloha-sd": "bin/cmd.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zeroconf",
+    "bonjour",
+    "avahi",
+    "zero",
+    "configuration",
+    "mdns",
+    "sevice",
+    "discovery",
+    "publish",
+    "register",
+    "multicast",
+    "dns-sd"
+  ],
+  "author": {
+    "name": "cuongurus",
+    "email": "cuongnd95@live.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuongurus/aloha-sd/issues"
+  },
+  "homepage": "https://github.com/cuongurus/aloha-sd",
+  "dependencies": {
+    "dns-txt": "~2.0.2",
+    "dns-packet": "~1.1.1",
+    "commander": "~2.9.0"
+  }
+}
