@@ -1,6 +1,6 @@
 {
   "name": "aloha-sd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Bonjour/Zeroconf protocol implementation in JavaScript",
   "main": "index.js",
   "bin": {

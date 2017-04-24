@@ -56,5 +56,6 @@ status: string
 
 ### `Service.status`
 A string indicating if the service is currently added ('Add') or removed ('Rmv')
+
 ## Publish
 On development.
