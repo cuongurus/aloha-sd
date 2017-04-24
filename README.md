@@ -26,6 +26,7 @@ var aloha = require('aloha-sd')
 ### Browsing
 #### `var finder = aloha.findAll(callback)`
 Browser for all services, regardless of the type
+
 ### `var finder = aloha.find(callback,service_type)`
 Browser for all services with given service_type
 
