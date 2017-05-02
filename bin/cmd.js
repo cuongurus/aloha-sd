@@ -10,13 +10,11 @@ program
     .parse(process.argv)
 
 if(program.all && !program.lookup){
-    console.log("Browsing for all serices\n" +
-    "A/R\tName\tService Type\t\tHost\tPort")
+    console.log("Browsing for all serices\n")
     aloha.findAll(callback)
 } 
 if(!program.all && program.lookup){
-    console.log("Browsing for "+ program.lookup + "\n" +
-    "A/R\tName\tService Type\t\tHost\tPort")
+    console.log("Browsing for "+ program.lookup + "\n")
     aloha.find(callback, program.lookup)
 } 
 if(program.all && program.lookup) console.log('Too many arguments')
@@ -25,6 +23,7 @@ function callback(err, result){
     if(err) console.log(err)
 
     if(result){
-     console.log(result.status + '\t' + result.name + '\t' + result.type + '\t' + result.host + '\t' + result.port + (result.status=='Rmv' ? '':'\n\t-IPv4: '  + result.ipv4 + '\n\t-IPv6: '+ result.ipv6 + '\n\t-TXT: ' +JSON.stringify(result.txt,null,0)))   
+     console.log(result.status ? ('+ '+ result.name + '\t\t' + result.type + '\n\thostname = ' + result.host +
+      '\n\taddress = ' + result.ipv4.concat(result.ipv6) + '\n\ttxt = ' + JSON.stringify(result.txt, null, 0)) : ('- ' + result.name + '\t\t' + result.type))  
     }
 }

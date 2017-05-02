@@ -69,12 +69,12 @@ port: string,
 ipv4: [],
 ipv6: [],
 txt: object,
-status: string
+status: boolean
 }
 ```
 
 ### `Service.status`
-A string indicating if the service is currently added ('Add') or removed ('Rmv')
+A boolean indicating if the service is currently added (true) or removed (false)
 
 ## Publish
 On development.
