@@ -4,7 +4,7 @@ var program = require('commander')
 var aloha = require('aloha-sd')
 
 program
-    .version('1.0.5')
+    .version('1.0.6')
     .option('-a, --all', 'Browse for all services')
     .option('-l, --lookup <service type>', 'Browse for specific service type')
     .parse(process.argv)
@@ -23,7 +23,8 @@ function callback(err, result){
     if(err) console.log(err)
 
     if(result){
-     console.log(result.status ? ('+ '+ result.name + '\t\t' + result.type + '\n\thostname = ' + result.host +
-      '\n\taddress = ' + result.ipv4.concat(result.ipv6) + '\n\ttxt = ' + JSON.stringify(result.txt, null, 0)) : ('- ' + result.name + '\t\t' + result.type))  
+     console.log(result.status ? ('+ '+ result.name + '\t\t' + result.type + '\n\thostname: ' + result.host +
+      '\n\taddress: ' + result.ipv4.concat(result.ipv6) + '\n\tport: ' + result.port + 
+      '\n\ttxt = ' + JSON.stringify(result.txt, null, 0)) : ('- ' + result.name + '\t\t' + result.type))  
     }
 }
