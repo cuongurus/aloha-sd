@@ -4,7 +4,7 @@ var program = require('commander')
 var aloha = require('aloha-sd')
 
 program
-    .version('1.0.6')
+    .version('1.0.7')
     .option('-a, --all', 'Browse for all services')
     .option('-l, --lookup <service type>', 'Browse for specific service type')
     .parse(process.argv)
